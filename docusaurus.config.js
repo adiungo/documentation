@@ -65,7 +65,7 @@ const config = {
                         items: [
                             {
                                 label: 'About Adiungo',
-                                to: '/intro',
+                                to: '/',
                             },
                         ],
                     },
