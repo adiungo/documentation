@@ -17,8 +17,8 @@ const config = {
     // GitHub pages deployment config.
     // If you aren't using GitHub pages, you don't need these.
     organizationName: 'adiungo', // Usually your GitHub org/user name.
-    projectName: 'core', // Usually your repo name.
-
+    projectName: 'docs.adiungo.io',
+    trailingSlash: false,
     // Even if you don't use internalization, you can use this field to set useful
     // metadata like html lang. For example, if your site is Chinese, you may want
     // to replace "en" with "zh-Hans".
@@ -51,7 +51,7 @@ const config = {
                 // },
                 items: [
                     {
-                        href: 'https://github.com/adiungo/core',
+                        href: 'https://github.com/adiungo/documentation',
                         label: 'GitHub',
                         position: 'right',
                     },
