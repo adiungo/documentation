@@ -64,8 +64,8 @@ const config = {
                         title: 'Docs',
                         items: [
                             {
-                                label: 'Tutorial',
-                                to: '/docs/intro',
+                                label: 'About Adiungo',
+                                to: '/intro',
                             },
                         ],
                     },
