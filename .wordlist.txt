@@ -12,3 +12,4 @@ Tumblr
 integrations
 TODO
 php
+boolean
