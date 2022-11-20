@@ -1,7 +1,4 @@
----
-sidebar_position: 4
-title: Content Models
----
+# Content Models
 
 A `Content_Model` represents a grouped collection of data that can have save and delete actions applied
 to it. It generally represents a "thing", such as a Tweet, a Mastodon post, a blog post, or something like that.

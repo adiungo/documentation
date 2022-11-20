@@ -28,5 +28,5 @@ while($data_source->has_more()){
 ?>
 ```
 
-Typically, these data sources are used by the [Index Strategy](index-strategy) to actually fetch the data. Ideally, this wouldn't
+Typically, these data sources are used by the [Index Strategy](index-strategies) to actually fetch the data. Ideally, this wouldn't
 run in a single thread, but instead run in a separate request using a background process, or something similar.
