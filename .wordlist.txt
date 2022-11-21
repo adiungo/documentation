@@ -28,3 +28,7 @@ npm
 fediverse
 readme
 CSV
+csv
+implementers
+pre
+NICU
