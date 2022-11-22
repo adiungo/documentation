@@ -14,7 +14,7 @@ Let's say you have a CSV file that you want to import to the database. To accomp
 the [CSV Data Source](/data-sources/csv), attach that data source to an index strategy, and then call that strategy to
 instruct the system to import, or _index_ the data in the database.
 
-For the sake of this example, let's assume we have a very basic [content model](/content-models) that includes content,
+For the sake of this example, let's assume we have a very basic [content model](/models/content-models) that includes content,
 a title, and an author.
 
 ```php
