@@ -18,6 +18,8 @@ loop through these items and know when to stop.
 ```php
 <?php
 /** @var Data_Source $data_source */
+$data_source->get_data()->each((Model $item) => $item->save());
+
 while($data_source->has_more()){
   // Returns the next page of data.
   $data_source = $data_source->get_next();
@@ -28,5 +30,21 @@ while($data_source->has_more()){
 ?>
 ```
 
-Typically, these data sources are used by the [Index Strategy](index-strategies) to actually fetch the data. Ideally, this wouldn't
+Typically, these data sources are used by the [Index Strategy](index-strategies) to actually fetch the data. Ideally,
+this wouldn't
 run in a single thread, but instead run in a separate request using a background process, or something similar.
+
+## Fetching a single item
+
+It's also possible to fetch a single record from a data source, based on the ID. This makes it possible to spot-check,
+or update a specific record when-needed.
+
+**WARNING: This approach will make a request each time it is called, and is not appropriate for getting batches of data.
+If you have a collection of IDs to retrieve, it's generally better to use `get_data`.**
+
+```php
+<?php
+/** @var Data_Source $data_source */
+$data_source->get_item(123);
+?>
+```

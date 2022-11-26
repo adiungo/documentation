@@ -53,7 +53,7 @@ are done by the platform integration by hooking into the events, like so:
 // Save
 Content_Model_Event::instance()->attach(Twitter::class, 'save', function(Content_Model_Provider $provider){
   /** @var Tweet $model */
-  $tweet = $provider->get_model();
+  $tweet = $provider->get_content_model();
   
   // Do things with the tweet, perhaps adapt it, and then save the content in the way your platform does that.
   // Note that save accounts for both creating, and updating content. It is up to you to determine if it needs saved!
@@ -62,7 +62,7 @@ Content_Model_Event::instance()->attach(Twitter::class, 'save', function(Content
 // Delete
 Content_Model_Event::instance()->attach(Twitter::class, 'delete', function(Content_Model_Provider $provider){
   /** @var Tweet $model */
-  $tweet = $provider->get_model();
+  $tweet = $provider->get_content_model();
   
   // Do things with the tweet, perhaps adapt it, and then delete/archive the content.
 });
