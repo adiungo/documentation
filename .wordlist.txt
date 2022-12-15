@@ -36,3 +36,9 @@ getter
 programmatically
 getters
 instanceof
+Url
+https
+url
+Param
+param
+http

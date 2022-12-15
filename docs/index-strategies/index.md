@@ -38,10 +38,14 @@ $csv_data = 'id,author,title,content
 
 $data_source = (new CSV())
                  ->set_model(Example_Model::class)
-                 ->map_column('id', 'set_id', Types::Integer)
-                 ->map_column('author','set_author', Types::String)
-                 ->map_column('title', 'set_title', Types::String)
-                 ->map_column('content', 'set_content', Types::String)
+                 ->set_data_source_adapter(
+                     (new Data_Source_Adapter()
+                        ->map_column('id', 'set_id', Types::Integer)
+                        ->map_column('author','set_author', Types::String)
+                        ->map_column('title', 'set_title', Types::String)
+                        ->map_column('content', 'set_content', Types::String)
+                     )
+                 )
                  ->set_csv($csv_data)
 ```
 
@@ -76,10 +80,14 @@ class Example_CSV_Importer implements Has_Index_Strategy, Has_Data_Source{
   public function __construct(string $csv_data){
     $this->set_data_source((new CSV())
                  ->set_model(Example_Model::class)
-                 ->map_column('id', 'set_id', Types::Integer)
-                 ->map_column('author','set_author', Types::String)
-                 ->map_column('title', 'set_title', Types::String)
-                 ->map_column('content', 'set_content', Types::String)
+                 ->set_data_source_adapter(
+                     (new Data_Source_Adapter()
+                        ->map_column('id', 'set_id', Types::Integer)
+                        ->map_column('author','set_author', Types::String)
+                        ->map_column('title', 'set_title', Types::String)
+                        ->map_column('content', 'set_content', Types::String)
+                     )
+                 )
                  ->set_csv($csv_data));
    $this->set_index_strategy((new Index_Strategy())->set_data_source($this->get_data_source()));
   }
@@ -108,7 +116,7 @@ $csv_data = 'id,author,title,content
 // Finally, you can override or change things. Perhaps you have a special csv where the "author" column is called "user"
 $importer = (new Example_CSV_Importer($csv_data));
 
-$importer->get_data_source()->map_column('user','set_author',Types::String);
+$importer->get_data_source()->get_data_source_adapter()->map_column('user','set_author',Types::String);
 
 $importer->get_index_strategy()->index_data();
 
