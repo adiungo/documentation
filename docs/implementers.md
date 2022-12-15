@@ -48,7 +48,8 @@ This approach has several benefits:
 
 ### Has_Attachments, With_Attachments
 
-Used to describe something that can have [attachments](/collections/attachments). Provides a way to get a collection of attachments, add
+Used to describe something that can have [attachments](/collections/attachments). Provides a way to get a collection of
+attachments, add
 attachments, and remove attachments, and a check to see if the model has any attachments at all.
 
 ### Has_Author, With_Author
@@ -57,7 +58,8 @@ Used to describe something that can have an author name, as a string.
 
 ### Has_Categories, With_Categories
 
-Used to describe something that can have [categories](/collections/categories). Provides a way to get a collection of categories, add
+Used to describe something that can have [categories](/collections/categories). Provides a way to get a collection of
+categories, add
 categories, and remove categories, and a check to see if the model has any categories at all.
 
 ### Has_Content, With_Content
@@ -100,3 +102,7 @@ tags, and remove tags, and a check to see if the model has any tags at all.
 ### Has_Updated_Date, With_Updated_Date
 
 Used to describe something that has a updated date, as a `DateTime`.
+
+### Has_Content_Model_Collection, With_Content_Model_Collection
+
+Used to describe something that has a [Content model collection](/collections/content-models)
