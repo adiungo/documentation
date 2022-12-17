@@ -1,3 +1,3 @@
 # WordPress Plugin
 
-This doesn't exist yet, but we're gettin' there!
+This doesn't exist yet, but we're getting there!
