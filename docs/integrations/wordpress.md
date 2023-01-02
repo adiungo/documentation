@@ -9,7 +9,7 @@ The WordPress integration makes it possible to index content on a WordPress webs
 ## Installation
 
 ```php
-composer require adiungo/integrations/wordpress
+composer require adiungo/integrations-wordpress
 ```
 
 ## Usage
